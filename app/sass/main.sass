@@ -46,22 +46,13 @@
 				opacity: 1
 
 
-
-
-
 .header
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
-	display: flex
-	flex-direction: column
+	position: relative
 	min-height: 650px
 	height: 100vh
+	background-repeat: no-repeat
 	background-size: cover
 	background-position: center
-	position: relative
-	align-content: center
 	&:before
 		content: ""
 		position: absolute
@@ -75,33 +66,29 @@
 		background-image: url("/img/texture.png")
 		background-size: cover
 	&__top
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		flex-flow: row wrap
-		justify-content: space-between
+		@extend %flex
+		width: 100%
 		padding-top: 6px
 		align-items: center
 
 .container
-	max-width: 960px
-	width: 100%
-	margin: 0 auto
-	padding: 0 10px
+	@extend %cont
+	@extend %flex
+	align-items: center
+
+.logo
+	display: block
+	width: 92px
+	height: 69px
 
 .navigation
-	width: 75%
+	display: flex
+	flex: 2
 
 .menu
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
-	display: flex
+	@extend %flex
 	justify-content: flex-end
-	margin: 0
+	margin: 0 0 0 auto
 	padding-left: 0
 	list-style: none
 	&__item
@@ -119,15 +106,11 @@
 		&:first-child
 			&:before
 				visibility: hidden
-		&:last-child
-			margin-right: 0
 	&__link
 		display: block
 		font-size: 13px
 		text-transform: uppercase
 		color: #ffffff
-
-
 
 .button
 	display: inline-block
@@ -151,11 +134,11 @@
 		text-decoration: none
 		color: #fff
 	&:hover
-		background-color: lighten($accent, 5%)
+		background-color: lighten(#e45028, 5%)
 		&::after
 			opacity: .22
 	&:active
-		background-color: darken($accent, 5%)
+		background-color: darken(#e45028, 5%)
 
 .composition
 	display: -webkit-flex
@@ -169,32 +152,78 @@
 	margin-bottom: 60px
 	&__title
 		color: $accent
-		font-family: gagalin
+		font-family: $gagalin
 		font-size: 72px
 		font-weight: 400
 	&__text
 		margin: 0
-		font-family: "lifehack-ex",sans-serif
+		font-family: lifehack,sans-serif
 		color: #ffffff
 		font-size: 65px
 		font-weight: 500
 		line-height: 100%
-	&__img
+	&__picture
 		flex: 0 0 50%
 	&__header
 		flex: 0 0 50%
 		padding: 42px 12px 12px
+
 .bottom
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
-	display: flex
+	@extend %flex
+	flex-basis: 100%
 	justify-content: center
 	padding-bottom: 23px
 	i
 		font-size: 50px
-		color: #fff
+		color: #ffffff
+	&__link
+		display: block
+
+.thebest
+	position: relative
+	min-height: 650px
+	height: 100vh
+	padding-bottom: 130px
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+	&__header
+		@extend %flex
+		flex-basis: 100%
+		justify-content: center
+		margin-top: 79px
+		font-family: $gagalin
+		font-size: 72px
+		font-weight: 400
+		text-align: center
+		line-height: 1
+		color: #2f3234
+
+.meal
+	@extend %flex
+	margin-top: 87px
+	&__item
+		flex: 0 0 calc(100% / 3)
+		text-align: center
+	&__img
+		margin: 0 auto 34px
+	&__title
+		display: block
+		margin-bottom: 25px
+		color: #2f3234
+		font-family: lifehack, sans-serif
+		font-size: 24px
+		font-weight: 500
+		line-height: 1.16
+	&__desc
+		margin: 0
+		font-size: 14px
+		font-weight: 300
+		color: #2f3234
+		opacity: 0.8
+
+
+
 
 
 
