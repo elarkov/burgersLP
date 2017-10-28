@@ -1,0 +1,18 @@
+//libs
+@import "../libs/fontawesome/font-awesome.min";
+@import "../libs/normalize-css/normalize";
+
+//config
+@import "config/_variables";
+@import "config/_mixins";
+
+//base
+@import "layout/_fonts";
+@import "layout/_base";
+@import "layout/_adjustment";
+
+//section
+@import "section/_points";
+@import "section/_slogan";
+@import "section/_thebest";
+@import "section/_testimonials";

@@ -1,0 +1,50 @@
+.thebest {
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-title_best {
+  color: $gray;
+  padding: 0;
+  margin-bottom: rem(60px);
+}
+
+.meal {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+
+.meal__item {
+  flex: 0 0 calc(100% / 3);
+  text-align: center;
+  padding-right: 35px;
+}
+
+.meal__img {
+  margin: 0 auto 34px;
+}
+
+.meal__title {
+  display: block;
+  margin-bottom: 25px;
+  color: #2f3234;
+  font-family: lifehack;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.16;
+}
+
+.meal__desc {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: $gray;
+  opacity: 0.8;
+}
+

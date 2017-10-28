@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  line-height: 1.42;
+  color: $dark;
+  -webkit-font-smoothing: antialiased;//подключаем префиксы для хрома
+  -moz-osx-font-smoothing: grayscale; //для мозилы чтобы шрифты сглаживались
+}
+
+*, *::before, *::after {
+  box-sizing: border-box; //чтобы ширина элементoв включала в себя padding
+}
+
+body, html {
+  height: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.visuallyhidden:not(:focus):not(:active) { //замена display: none
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

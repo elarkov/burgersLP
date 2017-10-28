@@ -1,0 +1,37 @@
+.points {
+  position: fixed;
+  z-index: 50;
+  color: #ffffff;
+  top: 14%;
+  right: 176px;
+}
+
+.parallax {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.parallax__item {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    margin-bottom: 13px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.parallax__item_active {
+  &:after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #fff;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    opacity: 1;
+  }
+}
