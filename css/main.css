@@ -2722,6 +2722,7 @@ section {
   font-weight: 500;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   line-height: 1.42;
   color: #ffffff;
   background-color: #e45028;
@@ -2746,7 +2747,7 @@ section {
   position: fixed;
   z-index: 50;
   color: #ffffff;
-  top: 14%;
+  top: 19%;
   right: 176px; }
 
 .parallax {
@@ -2810,6 +2811,13 @@ section {
 
 .header__logo {
   margin-right: auto; }
+
+.logo {
+  display: inline-block; }
+
+.logo__img {
+  max-width: 92px;
+  max-height: 69px; }
 
 .navigation {
   margin-right: 0.9375rem; }
@@ -2912,7 +2920,7 @@ section {
 
 .section-title {
   margin: 0;
-  padding-top: 60px;
+  padding-top: 120px;
   font-family: gagalin;
   font-size: 72px;
   font-weight: 400;
@@ -2955,10 +2963,13 @@ section {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+.thebest__container {
+  padding-top: 43px; }
 
 .section-title_best {
   color: #2f3234;
@@ -2988,7 +2999,7 @@ section {
   -ms-flex: 0 0 calc(100% / 3);
   flex: 0 0 calc(100% / 3);
   text-align: center;
-  padding-right: 35px; }
+  padding-right: 7px; }
 
 .meal__img {
   margin: 0 auto 34px; }
@@ -3043,7 +3054,9 @@ section {
   -webkit-flex: 0 0 calc(100% / 4);
   -ms-flex: 0 0 calc(100% / 4);
   flex: 0 0 calc(100% / 4);
-  text-align: left; }
+  text-align: left;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
 
 .testimonials__header {
   margin: 0 0 30px;
@@ -3078,3 +3091,5 @@ section {
     -webkit-transition: .5s;
     -o-transition: .5s;
     transition: .5s; }
+
+/*# sourceMappingURL=main.css.map */

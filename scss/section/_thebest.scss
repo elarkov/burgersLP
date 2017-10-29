@@ -4,7 +4,11 @@
   background-size: cover;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.thebest__container {
+  padding-top: 43px;
 }
 
 .section-title_best {
@@ -23,7 +27,7 @@
 .meal__item {
   flex: 0 0 calc(100% / 3);
   text-align: center;
-  padding-right: 35px;
+  padding-right: 7px;
 }
 
 .meal__img {

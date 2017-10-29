@@ -29,6 +29,15 @@
   margin-right: auto;
 }
 
+.logo {
+  display: inline-block;
+}
+
+.logo__img {
+  max-width: 92px;
+  max-height: 69px;
+}
+
 .navigation {
   margin-right: rem(15px);
 }
@@ -99,7 +108,7 @@
 
 .section-title {
   margin: 0;
-  padding-top: 60px;
+  padding-top: 120px;
   font-family: gagalin;
   font-size: 72px;
   font-weight: 400;

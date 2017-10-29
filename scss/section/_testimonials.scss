@@ -19,6 +19,7 @@
   background-size: cover;
   flex: 0 0 calc(100% / 4);
   text-align: left;
+  filter: grayscale(100%);
 }
 
 .testimonials__header {
