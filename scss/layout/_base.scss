@@ -5,12 +5,12 @@ body {
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
   line-height: 1.42;
   color: $dark;
-  -webkit-font-smoothing: antialiased;//подключаем префиксы для хрома
-  -moz-osx-font-smoothing: grayscale; //для мозилы чтобы шрифты сглаживались
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 *, *::before, *::after {
-  box-sizing: border-box; //чтобы ширина элементoв включала в себя padding
+  box-sizing: border-box;
 }
 
 body, html {
@@ -29,7 +29,7 @@ img {
   height: auto;
 }
 
-.visuallyhidden:not(:focus):not(:active) { //замена display: none
+.visuallyhidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;

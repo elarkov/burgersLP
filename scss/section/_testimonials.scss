@@ -44,6 +44,9 @@
   text-transform: uppercase;
   background-color: $gray;
   border-radius: 7px;
+  &:hover {
+    background-color: $gray;
+  }
 }
 
 .testimonials__overlay {
@@ -56,5 +59,6 @@
     opacity: 1;
     cursor: pointer;
     transition: .5s;
+    filter: grayscale(0%);
   }
 }
