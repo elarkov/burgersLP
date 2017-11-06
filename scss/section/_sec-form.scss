@@ -1,0 +1,274 @@
+.sec-form {
+  background-repeat: no-repat;
+  background-position: center;
+  background-size: cover;
+}
+
+.section-title_form {
+  margin-top: rem(60px);
+  text-align: center;
+
+  @include tablets {
+    margin-top: rem(0px);
+    font-size: rem(67px);
+  }
+
+  @include mobile {
+    margin-top: 0;
+    font-size: rem(45px);
+    line-height: 1.2;
+  }
+}
+
+.form-ordering {
+  margin-top: rem(58px);
+  margin-bottom: rem(42px);
+
+  @include tablets {
+    margin-top: rem(20px);
+    margin-bottom: 0;
+  }
+}
+
+.form-ordering__flexcont {
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.form-ordering__inputs {
+  flex: 0 0 calc(100% / 2);
+  margin-right: 2%;
+  margin-bottom: 0;
+
+  @include tablets {
+    margin-right: 0;
+    padding: 0 145px;
+  }
+
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.form-ordering__row {
+  display: flex;
+  margin-bottom: rem(11px);
+}
+
+.form-ordering__point {
+  display: inline-block;
+  flex: 1;
+  margin-right: rem(17px);
+}
+
+.form-ordering__point:last-child {
+  margin-right: 0;
+}
+
+.form-ordering__title {
+  display: block;
+  margin-bottom: rem(12px);
+  font-size: rem(14px);
+  font-weight: 300;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.form-ordering__input {
+  width: 100%;
+  padding: rem(10px);
+  font-size: rem(14px);
+  font-weight: 300;
+  color: #221f1f;
+  border: rem(1px) solid transparent;
+  border-radius: rem(5px);
+}
+
+.form-ordering__input:focus {
+  border-color: $orange;
+  outline: none;
+}
+
+.form-ordering__message {
+  width: 100%;
+}
+
+.form-ordering__text {
+  width: 100%;
+  max-height: rem(110px);
+  padding: 0 rem(10px);
+  font-size: rem(14px);
+  font-weight: 300;
+  color: #221f1f;
+  border: rem(1px) solid transparent;
+  border-radius: rem(5px);
+  resize: none;
+}
+
+.form-ordering__text:focus {
+  border-color: $orange;
+  outline: none;
+}
+
+.form-ordering__radios-point {
+  display: flex;
+  margin-bottom: rem(11px);
+
+  @include mobile {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.form-ordering__radio {
+  display: flex;
+  align-items: center;
+  margin-right: rem(10px);
+}
+
+.form-ordering__radio:last-child {
+  margin-right: 0;
+}
+
+.form-ordering__radio-check {
+  width: rem(20px);
+  height: rem(20px);
+  margin: 0 rem(3px) 0 0;
+  vertical-align: top;
+}
+
+.form-ordering__radio-checkbox {
+  width: rem(18px);
+  height: rem(18px);
+  background-color: #ffffff;
+}
+
+.form-ordering__radio-check + label,
+.form-ordering__radio-checkbox:not(checked) + label {
+  font-size: rem(14px);
+  font-weight: 300;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.form-ordering__radio-check:not(checked),
+.form-ordering__radio-checkbox:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+
+.form-ordering__radio-check:not(checked) + label,
+.form-ordering__radio-checkbox:not(checked) + label {
+  position: relative;
+  padding: 0 0 0 rem(28px);
+}
+
+.form-ordering__radio-check:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: rem(18px);
+  height: rem(18px);
+  border: rem(1px) solid #c9c9c9;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.form-ordering__radio-checkbox:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: rem(18px);
+  height: rem(18px);
+  background-color: #ffffff;
+  border: rem(1px) solid #c9c9c9;
+}
+
+.form-ordering__radio-check:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: rem(5px);
+  left: rem(5px);
+  width: rem(8px);
+  height: rem(8px);
+  border-radius: 50%;
+  background-color: $orange;
+  opacity: 0;
+  transition: all .2s;
+}
+
+.form-ordering__radio-checkbox:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: rem(5px);
+  left: rem(4px);
+  width: rem(11px);
+  height: rem(8px);
+  background-image: url("/img/icon/checkbox.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transition: all .2s;
+}
+
+.form-ordering__radio-check:checked + label:after {
+  opacity: 1;
+}
+
+.form-ordering__radio-checkbox:checked + label:after {
+  opacity: 1;
+}
+
+.form-ordering__radio-check:checked  + label,
+.form-ordering__radio-checkbox:checked + label {
+  font-size: rem(14px);
+  font-weight: 300;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.form-ordering__radio-check:focus + label:before {
+  border: rem(1px) solid #ffffff;
+}
+
+.form-ordering__button {
+  display: flex;
+  align-items: center;
+
+  @include mobile {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.button_reset {
+  font-size: rem(14px);
+  text-transform: capitalize;
+  background: transparent;
+  &:hover {
+    background: transparent;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

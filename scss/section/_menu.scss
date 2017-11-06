@@ -1,0 +1,114 @@
+.menu{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.section-title_menu {
+  position: absolute;
+  top: 13%;
+  left: 16%;
+  color: #ffffff;
+
+  @include mobile {
+    left: 8%;
+  }
+}
+
+.menu-accordion {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.menu-accordion__item {
+  height: 100%;
+}
+
+.menu-accordion__item_active {
+  .menu-accordion__link {
+    color: $yellow;
+  }
+}
+
+.menu-accordion__item_active {
+  .menu-accordion__desc {
+    width: 100%;
+
+    @include mobile {
+      margin-left: rem(36px);
+      max-width: rem(211px);
+    }
+  }
+}
+
+.menu-accordion__link {
+  position: relative;
+  display: block;
+  float: left;
+  width: rem(80px);
+  height: 100%;
+  font-family: gagalin;
+  font-size: rem(40px);
+  font-weight: 400;
+  text-decoration: none;
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $gray;
+    opacity: 0.63;
+  }
+
+  @include mobile {
+    width: rem(42px);
+    font-size: rem(21px);
+  }
+
+}
+
+.menu-accordion__text {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  display: block;
+  white-space: nowrap;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: 0 0;
+}
+
+.menu-accordion__desc {
+  max-width: rem(560px);
+  width: 0;
+  height: 100%;
+  background-color: $gray;
+  overflow: hidden;
+  opacity: 0.93;
+}
+
+.menu-accordion__desc p {
+  margin: 0;
+  font-family: ubuntu;
+  font-size: rem(14px);
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.menu-accordion__inner {
+  width: 100%;
+  padding: rem(63px) rem(38px);
+
+  @include mobile {
+    padding: rem(20px) rem(13px);
+  }
+}

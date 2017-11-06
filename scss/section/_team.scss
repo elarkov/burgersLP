@@ -1,0 +1,152 @@
+.team {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.crew {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: $gray;
+  opacity: 0.93;
+
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.crew__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: rem(80px) rem(93px) rem(80px) rem(77px);
+
+  @include tablets {
+    align-items: center;
+    text-align: center;
+    padding-top: rem(21px);
+  }
+
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.accordion {
+  @include mobile {
+    margin-top: rem(45px);
+  }
+}
+
+.section-title_crew {
+  margin: 0 0 rem(68px);
+  line-height: 1;
+
+  @include mobile {
+    margin-top: rem(50px);
+    margin-bottom: 0;
+  }
+}
+
+.accordion__item {
+  position: relative;
+  margin: 0 0 rem(27px) 0;
+}
+
+.accordion__link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-left: rem(20px);
+  font-family: gagalin;
+  font-size: rem(14px);
+  font-weight: 400;
+  text-decoration: none;
+  color: #ffffff;
+  &:before {
+    content: "";
+    position: absolute;
+    left: rem(-25px);
+    width: 0;
+    height: 0;
+    margin-right: rem(10px);
+    border: rem(7px) solid transparent;
+    border-top-color: $yellow;
+    border-bottom-width: rem(0px);
+  }
+
+  @include tablets {
+    justify-content: center;
+    font-size: rem(25px);
+  }
+}
+
+.accordion__item_active {
+  .accordion__link {
+    margin-bottom: rem(15px);
+    color: $yellow;
+    &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border: rem(7px) solid transparent;
+      border-top-color: $yellow;
+      border-bottom-width: rem(0px);
+      transform: rotate(180deg);
+    }
+  }
+
+  .accordion__desc {
+    padding-top: rem(11px);
+    height: 100%;
+  }
+}
+
+.accordion__desc {
+  display: flex;
+  height: 0;
+  overflow: hidden;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.accordion__picture {
+  width: 100%;
+  max-width: rem(103px);
+  height: 100%;
+  margin-right: rem(15px);
+  margin-left: rem(20px);
+
+  @include tablets {
+    margin-bottom: rem(12px);
+  }
+}
+
+.accordion__right {
+  max-width: rem(210px);
+  width: 100%;
+}
+
+.accordion__right h2,
+.accordion__right p {
+  margin: 0;
+  color: #ffffff;
+  font-family: ubuntu;
+  font-size: rem(14px);
+  font-weight: 700;
+}
+
+.accordion__right h2 {
+  margin: 0 0 rem(18px) 0;
+}
+.accordion__right p {
+  font-weight: 300;
+}
+
+

@@ -1,5 +1,4 @@
 //libs
-@import "../libs/fontawesome/font-awesome.min";
 @import "../libs/normalize-css/normalize";
 
 //config
@@ -13,6 +12,11 @@
 
 //section
 @import "section/_points";
+@import "section/_humburger";
 @import "section/_slogan";
 @import "section/_thebest";
 @import "section/_testimonials";
+@import "section/_team";
+@import "section/_menu";
+@import "section/_contacts";
+@import "section/_sec-form";

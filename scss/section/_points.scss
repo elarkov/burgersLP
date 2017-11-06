@@ -1,34 +1,35 @@
 .points {
   position: fixed;
   z-index: 50;
-  color: #ffffff;
   top: 19%;
-  right: 176px;
+  right: rem(176px);
+  display: none;
+  color: #ffffff;
 }
 
-.parallax {
-  list-style: none;
+.nav-scroll {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
-.parallax__item {
-    position: relative;
-    width: 8px;
-    height: 8px;
-    margin-bottom: 13px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    cursor: pointer;
+.nav-scroll__item {
+  position: relative;
+  width: rem(8px);
+  height: rem(8px);
+  margin-bottom: rem(13px);
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.parallax__item_active {
+.nav-scroll__item_active {
   &:after {
     content: "";
     position: absolute;
     top: -56%;
     left: -58%;
-    width: 18px;
-    height: 18px;
+    width: rem(18px);
+    height: rem(18px);
     border: 1px solid #fff;
     -webkit-border-radius: 50%;
     border-radius: 50%;
