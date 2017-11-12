@@ -25,6 +25,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.noScroll {
+  overflow: hidden;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }

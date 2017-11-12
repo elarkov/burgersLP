@@ -1,0 +1,43 @@
+@charset 'UTF-8';
+
+/* Arrows */
+
+
+.slick-prev,
+.slick-next {
+	border: 0;                           
+	color: transparent;            
+	font-size: 0;                       
+
+	width: 30px;
+	height: 30px;
+	background: url("/img/icon/arrow-scroll.svg") no-repeat;
+
+	position: absolute;
+	top: 50%;
+	z-index: 1;
+	margin-top: -15px;
+	opacity: .8;                     
+
+	&:focus {
+		outline: 0;       
+	}
+
+	&:hover {
+		opacity: 1;             
+		cursor: pointer;
+	}
+}
+
+.slick-prev {
+	left: -16px;
+	transform: rotate(90deg);
+}
+
+.slick-next {
+	right: -16px;
+	transform: rotate(-90deg);
+}
+
+
+

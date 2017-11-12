@@ -1,4 +1,6 @@
 .contacts {
+  position: relative;
+  z-index: 1;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -9,6 +11,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 100;
   background-image: url("/img/bg-section/bg-footer.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -102,4 +105,15 @@
   @include mobile {
     margin: 0;
   }
+}
+
+.logo__img_map {
+  width: 45px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.js-headerBalloon {
+  color: $orange;
 }

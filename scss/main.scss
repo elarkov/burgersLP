@@ -1,5 +1,7 @@
 //libs
 @import "../libs/normalize-css/normalize";
+@import "../js/js-slider/slick/slick";
+@import "../js/js-slider/slick/slick-theme";
 
 //config
 @import "config/_variables";
@@ -15,8 +17,10 @@
 @import "section/_humburger";
 @import "section/_slogan";
 @import "section/_thebest";
+@import "section/_slider";
 @import "section/_testimonials";
 @import "section/_team";
 @import "section/_menu";
 @import "section/_contacts";
 @import "section/_sec-form";
+
