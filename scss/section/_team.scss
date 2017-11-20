@@ -76,6 +76,7 @@
     border: rem(7px) solid transparent;
     border-top-color: $yellow;
     border-bottom-width: rem(0px);
+    transition: .5s;
   }
 
   @include tablets {
@@ -96,20 +97,22 @@
       border-top-color: $yellow;
       border-bottom-width: rem(0px);
       transform: rotate(180deg);
+      transition: .5s;
     }
   }
 
   .accordion__desc {
     padding-top: rem(11px);
+    display: flex;
     height: 100%;
   }
 }
 
 .accordion__desc {
   display: flex;
-  height: 0;
   overflow: hidden;
-
+  height: 0;
+  transition: max-height 0.2s ease-out;
   @include tablets {
     flex-direction: column;
     align-items: center;

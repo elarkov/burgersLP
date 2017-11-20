@@ -1,0 +1,38 @@
+@charset 'UTF-8';
+
+
+/* Arrows */
+.slick-arrow {
+	border: 0;
+
+	width: 30px;
+	height: 30px;
+	background: url("/img/icon/arrow-scroll.svg") no-repeat;
+
+	position: absolute;
+	top: 50%;
+	z-index: 1;
+	margin-top: -15px;
+	opacity: .8;
+	transform: rotate(90deg);
+
+	&:focus {
+		outline: 0;
+	}
+
+	&:hover {
+		opacity: 1;
+		cursor: pointer;
+	}
+}
+
+.slick-prev {
+	left: -15px;
+}
+
+.slick-next {
+	right: -15px;
+	transform: rotate(-90deg);
+}
+
+

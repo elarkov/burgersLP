@@ -64,6 +64,9 @@
   text-transform: uppercase;
   background-color: $gray;
   border-radius: rem(7px);
+  &:hover {
+    background-color: #1f2122;
+  }
 }
 
 .testimonials__overlay {
@@ -91,4 +94,58 @@
     align-items: center;
     padding: 0;
   }
+}
+
+.testimonials-modal {
+  display: none;
+  width: 460px;
+  height: auto;
+  overflow: auto;
+  background-color: #ffffff;
+  border-radius: 4px;
+
+  @include mobile {
+    width: 60%;
+  }
+}
+
+.testimonials-modal__content {
+  position: relative;
+}
+
+.testimonials-modal__header {
+  margin: 0 0 rem(22px);
+  font-family: gagalin;
+  font-size: rem(14px);
+  font-weight: 400;
+  line-height: 1.42;
+}
+
+.testimonials-modal__text {
+  font-family: ubuntu;
+  font-size: rem(14px);
+  font-weight: 300;
+  line-height: 1.42;
+  color: #444444;
+}
+
+.fancybox-close-small {
+  &:after {
+    color: $orange;
+  }
+}
+
+.fancybox-close-small{
+  &:hover{
+    &:after{
+      color: $orange;
+      background: transparent;
+    }
+  }
+}
+
+.close-btn {
+  width: 15px;
+  height: 15px;
+  fill: rgb(228, 80, 40);
 }

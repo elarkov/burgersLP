@@ -1,7 +1,9 @@
 //libs
 @import "../libs/normalize-css/normalize";
-@import "../js/js-slider/slick/slick";
-@import "../js/js-slider/slick/slick-theme";
+@import "../libs/fancybox/jquery.fancybox";
+@import "../libs/slick/slick";
+@import "../libs/slick/slick-theme";
+@import "../libs/onepagescroll/onepage-scroll";
 
 //config
 @import "config/_variables";

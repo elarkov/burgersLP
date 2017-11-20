@@ -8,7 +8,7 @@
 .slider__wrap {
 	
 	@include tablets {
-		padding: 0 90px;
+		padding: 0;
 	}
 
 	@include mobile {
@@ -29,6 +29,7 @@
 	padding-bottom: 90px;
 
 	@include tablets {
+		width: 750px;
 		flex-direction: column;
 		align-items: center;
 		padding-top: 90px;
@@ -118,15 +119,8 @@
 
 .consist {
 	position: absolute;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	width: 93px;
 	height: 93px;
-	background-color: #e35028;
-	opacity: 0.4;
-	border-radius: 5px;
 	cursor: pointer;
 
 	@include tablets {
@@ -134,6 +128,26 @@
 		left: 0;
 	}
 }
+
+.consist__content {
+	opacity: 0.4;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #e35028;
+	border-radius: 5px;
+		&:hover {
+			opacity: 1;
+			+ .drop-menu {
+			display: block;
+		}
+	}
+}
+
+
 
 .consist__text {
 	color: #ffffff;
@@ -194,31 +208,11 @@
 	top: 35%;
 }
 
-/*.slider__prev {
-	position: absolute;
-	left: 0;
-	top: 50%;
-	display: block;
-	svg {
-		transform: rotate(90deg);
-	}
-}
-
-.slider__next {
-	position: absolute;
-	right: 0;
-	top: 50%;
-	display: block;
-	svg {
-		transform: rotate(-90deg);
-	}
-} 
-
 .slider__arrow-scroll {
 	width: rem(29px);
   height: rem(14px);
   fill: #ededed;
-}*/
+} 
 
 .burger-slider {
 	.slick-slide {
@@ -226,36 +220,56 @@
 	}
 }
 
+.drop-menu {
+	position: absolute;
+	top: 0;
+	left: 100px;
+	display: none;
+	width: 273px;
+	padding: 20px 24px;
+	background: #fff;
+	border-radius: 7px;
+	opacity: 0.9;
 
-/*.slider-arrow {
-    border: 0;
+	@include mobile {
+		width: 200px;
+	}
+}
 
-    width: 30px;
-    height: 30px;
-    background: url("/img/icon/arrow-scroll.svg") no-repeat;
+.drop-menu__table {
+	display: table;
+	width: 100%;
+}
 
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    margin-top: -15px;
-		opacity: .8;
-		transform: rotate(90deg);
+.drop-menu__table-group {
+	display: table-row-group;
+}
 
-    &:focus {
-        outline: 0;
-    }
+.drop-menu__table-row {
+	display: table-row;
+}
 
-    &:hover {
-        opacity: 1;
-        cursor: pointer;
-    }
+.drop-menu__text {
+	font-family: Ubuntu;
+	font-size: 14px;
+	font-weight: 500;
+	text-align: left;
+}
 
-    &.prev {
-        left: 0;
-    }
+.drop-menu__table-cell {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 5px 0;
 
-    &.next {
-        right: 0;
-        transform: rotate(-90deg);
-    }
-}*/
+	&:last-child {
+		.drop-menu__text {
+			text-align: right;
+			font-weight: 300;
+		}
+	}
+}
+
+.drop-menu__img {
+	width: 44px;
+	height: 39px;
+}
