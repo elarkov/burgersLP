@@ -213,35 +213,20 @@ var accordionItem = document.querySelectorAll('.accordion__item');
 		}
 }());
 
-/*var ajax = function () {
-	console.log('test');
-	$("#form-order").submit(function (e) {
-		e.preventDefault();
-		var form = $(this);
-		$.ajax({
-			type: "POST",
-			url: "server.php",
-			data: form.serialize()
-		}).done(function () {
-			$.fancybox.open({
-				src: '#form-modal',
-				type: 'inline',
-				afterClose: function () {
-					form.trigger("reset");
-				}
-			});
-		});
-		return false;
+//form script ajax
+
+$("#form-order").submit(function () { 
+	var form = $(this);
+	$.ajax({
+		type: "POST",
+		url: "server.php", 
+		data: form.serialize()
+	}).done(function () {
+		
 	});
-}*/
+	return false;
+});
 
-
-function handleChange () {
-	var name = document.querySelector('#input-name');
-	name.addEventListener('change', e => {
-
-	})
-}
 
 //validate form script
 $(function(){
@@ -274,30 +259,36 @@ $(function(){
         },
         focusCleanup: true,
 		focusInvalid: false,
-		submitHandler: function () {
-			$('#form-order').submit(function (e) {
-				e.preventDefault();
-				
-				var form = $(this);
-				if (form.valid()) {
-					$('#submit').attr('disabled')
-					$.ajax({
-						type: "POST",
-						url: "server.php",
-						data: form.serialize()
-					}).done(function () {
-						$.fancybox.open({
-							src: '#form-modal',
-							type: 'inline',
-							afterClose: function () {
-								form.trigger("reset");
-							}
-						});
+		submitHandler: function (form) {
+
+				/*второй вариант
+				var form = $('#form-order');
+				$('#submit').attr('disabled')
+				$.ajax({
+					type: "POST",
+					url: "server.php",
+					data: form.serialize()
+				}).done(function () {
+					form.find('#submit').attr('disabled', 'disabled');
+					$.fancybox.open({
+						src: '#form-modal',
+						type: 'inline',
+						afterClose: function () {
+							form.trigger("reset");
+						}
 					});
+				});*/
+			var form = $('#form-order');
+			$.fancybox.open({
+				src: '#form-modal',
+				type: 'inline',
+				afterClose: function () {
+					form.trigger("reset");
 				}
-				return false;
 			});
-		}, 
+			
+		},
+
         invalidHandler: function(event, validator){
             $('.js-message').text('Пожалуйста заполните необходимые поля')
         },
