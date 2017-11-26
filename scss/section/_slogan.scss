@@ -17,6 +17,10 @@
     background-image: url("../img/texture.png");
     background-size: cover;
   }
+
+  @include tablets {
+    min-height: auto;
+  }
 }
 
 .header {
@@ -54,7 +58,6 @@
     padding: 80px 5% 0;
     z-index: 3;
     overflow: auto;
-    /* visibility: hidden; */
     display: none;
     text-align: center;
   }

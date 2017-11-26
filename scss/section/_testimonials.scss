@@ -96,7 +96,8 @@
   }
 }
 
-.testimonials-modal {
+.testimonials-modal,
+.modal-form {
   display: none;
   width: 460px;
   height: auto;
@@ -109,7 +110,8 @@
   }
 }
 
-.testimonials-modal__content {
+.testimonials-modal__content,
+.modal-form__content {
   position: relative;
 }
 
@@ -121,7 +123,8 @@
   line-height: 1.42;
 }
 
-.testimonials-modal__text {
+.testimonials-modal__text,
+.modal-form__text {
   font-family: ubuntu;
   font-size: rem(14px);
   font-weight: 300;

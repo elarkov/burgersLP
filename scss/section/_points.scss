@@ -3,8 +3,12 @@
   z-index: 50;
   top: 19%;
   right: rem(176px);
-  display: none;
-  color: #ffffff;
+  display: block;
+	color: #ffffff;
+	
+	@include tablets {
+		display: none;
+	}
 }
 
 .nav-scroll {
@@ -12,27 +16,61 @@
   padding: 0;
   list-style: none;
 }
-.nav-scroll__item {
-  position: relative;
-  width: rem(8px);
-  height: rem(8px);
-  margin-bottom: rem(13px);
-  background-color: #ffffff;
-  border-radius: 50%;
-  cursor: pointer;
+
+.nav-scroll__link {
+	width: rem(16px);
+	height: rem(16px);
+	display: block;
+	position: relative;
+
+	&:after, &:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+	}
+
+	&:after {
+		width: rem(6px);
+		height: rem(6px);
+		background: #fff;
+	}
+
+	&:before {
+		width: rem(0px);
+		height: rem(0px);
+		border-radius: 50%;
+		border: rem(1px) solid #fff;
+		opacity: 0;
+		transition: .3s;
+	}
+
+	&:hover {
+		&:before {
+			width: rem(14px);
+			height: rem(14px);
+			opacity: 1;
+		}
+	}
 }
 
-.nav-scroll__item_active {
-  &:after {
-    content: "";
-    position: absolute;
-    top: -56%;
-    left: -58%;
-    width: rem(18px);
-    height: rem(18px);
-    border: 1px solid #fff;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    opacity: 1;
-  }
+.nav-scroll__item {
+	&.active {
+		.nav-scroll__link {
+			&:before {
+				width: rem(14px);
+				height: rem(14px);
+				opacity: 1;
+			}
+		}
+	}
 }
+
+.nav-scroll__item {
+	margin-bottom: rem(5px);
+}
+
+

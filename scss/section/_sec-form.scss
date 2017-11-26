@@ -87,6 +87,28 @@
   border-radius: rem(5px);
 }
 
+.form-ordering__input.error {
+    background: $orange;
+  }
+
+label.error {
+  display: block;
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.message {
+  padding: 20px;
+  background-color: $orange;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+
+  &:empty {
+    display: none;
+  }
+}
+
 .form-ordering__input:focus {
   border-color: $orange;
   outline: none;
@@ -254,6 +276,9 @@
     background: transparent;
   }
 }
+
+
+
 
 
 

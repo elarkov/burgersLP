@@ -26,8 +26,8 @@ body {
 }
 
 body.noScroll {
-  overflow: hidden;
-}
+    overflow: hidden;
+  }
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -72,3 +72,10 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.success{
+  color: green;
+}
+.error{
+  color: red;
+}   

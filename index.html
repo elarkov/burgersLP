@@ -18,7 +18,7 @@
 <body>
 	<div class="wrapper">
 		<div class="main-content">
-			<section class="slogan" style="background-image: url(img/bg-section/bg-header.png);">
+			<section class="slogan active" style="background-image: url(img/bg-section/bg-header.png);">
 				<div class="container slogan__container">
 					<header class="header">
 						<div class="header__logo">
@@ -30,28 +30,28 @@
 							<nav class="navigation">
 								<ul class="navigation__list">
 									<li class="navigation__item">
-										<a class="navigation__link" href="#">о нас</a>
+										<a class="navigation__link"  href="" data-scroll-to="1">о нас</a>
 									</li>
 									<li class="navigation__item">
-										<a class="navigation__link" href="#">бургеры</a>
+										<a class="navigation__link" href="" data-scroll-to="2">бургеры</a>
 									</li>
 									<li class="navigation__item">
-										<a class="navigation__link" href="#">команда</a>
+										<a class="navigation__link" href="" data-scroll-to="3">команда</a>
 									</li>
 									<li class="navigation__item">
-										<a class="navigation__link" href="#">меню</a>
+										<a class="navigation__link" href="" data-scroll-to="4">меню</a>
 									</li>
 									<li class="navigation__item">
-										<a class="navigation__link" href="#">отзывы</a>
+										<a class="navigation__link" href="" data-scroll-to="5">отзывы</a>
 									</li>
 									<li class="navigation__item">
-										<a class="navigation__link" href="#">контакты</a>
+										<a class="navigation__link" href="" data-scroll-to="7">контакты</a>
 									</li>
 								</ul>
 							</nav>
 						</div>
 						<div class="header__btn">
-							<a class="button header__btn_link" href="#">заказать</a>
+							<a class="button header__btn_link" href="" data-scroll-to="6">заказать</a>
 							<div class="hamburger">
 								<div class="hamburger__line"></div>
 								<div class="hamburger__line"></div>
@@ -72,7 +72,7 @@
 						</div>
 					</div>
 					<div class="bottom-arrow">
-						<a class="bottom-arrow__link" href="#">
+						<a class="bottom-arrow__link" href="" data-scroll-to="1">
 							<svg class="arrow-scroll">
 								<use xlink:href="../img/icon/sprite/sprite.svg#arrow-scroll"></use>
 							</svg>
@@ -207,7 +207,7 @@
 											гриль теперь с добавлением экзотического соуса чураско.</div>
 											<div class="price">
 												<div class="price__text">500 <span class="price__rub">рублей</span></div>
-												<div class="button">заказать</div>
+												<div class="button" data-scroll-to="6">заказать</div>
 											</div>
 									</div>
 								</li>
@@ -746,44 +746,44 @@
 					<div class="form-ordering">
 						<div class="form-ordering__wrapper">
 
-							<form class="form-ordering__form" action="" method="POST">
+							<form id="form-order" class="form-ordering__form" action="server.php" method="POST">
 								<div class="form-ordering__flexcont">
 									<div class="form-ordering__inputs">
 
 										<div class="form-ordering__row">
 											<label class="form-ordering__point">
 												<span class="form-ordering__title" for="name">Имя:</span>
-												<input class="form-ordering__input" type="text">
+												<input id="input-name" class="form-ordering__input" name="name" type="text" required>
 											</label>
 											<label class="form-ordering__point">
-												<span class="form-ordering__title" for="name">Телефон:</span>
-												<input class="form-ordering__input" type="phone">
-											</label>
-										</div>
-
-										<div class="form-ordering__row">
-											<label class="form-ordering__point">
-												<span class="form-ordering__title" for="name">Улица:</span>
-												<input class="form-ordering__input" type="text">
+												<span class="form-ordering__title" for="phone">Телефон:</span>
+												<input id="input-phone" class="form-ordering__input" name="phone" type="tel" required>
 											</label>
 										</div>
 
 										<div class="form-ordering__row">
 											<label class="form-ordering__point">
-												<span class="form-ordering__title" for="name">Дом:</span>
-												<input class="form-ordering__input" type="text">
+												<span class="form-ordering__title" for="street">Улица:</span>
+												<input id="inpun-street" class="form-ordering__input" name="street" type="text" required>
+											</label>
+										</div>
+
+										<div class="form-ordering__row">
+											<label class="form-ordering__point">
+												<span class="form-ordering__title" for="home">Дом:</span>
+												<input class="form-ordering__input" name="home" type="text">
 											</label>
 											<label class="form-ordering__point">
-												<span class="form-ordering__title" for="name">Корпус:</span>
-												<input class="form-ordering__input" type="text">
+												<span class="form-ordering__title" for="shape">Корпус:</span>
+												<input class="form-ordering__input" name="shape" type="text">
 											</label>
 											<label class="form-ordering__point">
-												<span class="form-ordering__title" for="name">Квартира:</span>
-												<input class="form-ordering__input" type="text">
+												<span class="form-ordering__title" for="flat">Квартира:</span>
+												<input class="form-ordering__input" name="flat" type="text">
 											</label>
 											<label class="form-ordering__point">
-												<span class="form-ordering__title" for="name">Этаж:</span>
-												<input class="form-ordering__input" type="text">
+												<span class="form-ordering__title" for="floor">Этаж:</span>
+												<input class="form-ordering__input" name="floor" type="text">
 											</label>
 										</div>
 
@@ -793,19 +793,19 @@
 
 										<div class="form-ordering__row">
 											<label class="form-ordering__message">
-												<span class="form-ordering__title" for="">Комментарий:</span>
-												<textarea class="form-ordering__text" name="" id="" cols="30" rows="10"></textarea>
+												<span class="form-ordering__title" for="comment">Комментарий:</span>
+												<textarea class="form-ordering__text" name="comment" cols="30" rows="10"></textarea>
 											</label>
 										</div>
 
 										<div class="form-ordering__row">
 											<div class="form-ordering__radios-point">
 												<div class="form-ordering__radio">
-													<input class="form-ordering__radio-check" type="radio" id="radio-1" name="radio" checked>
+													<input class="form-ordering__radio-check" type="radio" id="radio-1" name="radio" value="наличными">
 													<label class="form-ordering__radio-name" for="radio-1">Потребуется сдача</label>
 												</div>
 												<div class="form-ordering__radio">
-													<input class="form-ordering__radio-check" type="radio" id="radio-2" name="radio">
+													<input class="form-ordering__radio-check" type="radio" id="radio-2" name="radio" value="картой">
 													<label class="form-ordering__radio-name" for="radio-2">Оплата по карте</label>
 												</div>
 											</div>
@@ -814,7 +814,7 @@
 										<div class="form-ordering__row">
 											<div class="form-ordering__radios-point">
 												<div class="form-ordering__radio">
-													<input class="form-ordering__radio-checkbox" type="checkbox" id="radio-3" name="checkbox" checked>
+													<input class="form-ordering__radio-checkbox" type="checkbox" id="radio-3" name="checkbox">
 													<label class="form-ordering__radio-name" for="radio-3">Не перезванивать</label>
 												</div>
 											</div>
@@ -822,14 +822,14 @@
 
 										<div class="form-ordering__row">
 											<div class="form-ordering__button">
-												<button class="button" type="submit">Заказать</button>
-												<button class="button button_reset" type="submit">Очистить</button>
+												<button id="submit" class="button" type="submit">Заказать</button>
+												<button class="button button_reset" type="reset">Очистить</button>
 											</div>
 										</div>
 
 									</div><!--/.form-ordering__inputs-->
 								</div><!--/.form-ordering__flex-cont-->
-
+								<div class="message js-message"></div>
 							</form>
 
 						</div><!--/.form-ordering__wrapper-->
@@ -881,34 +881,59 @@
 					</div>
 				</footer>
 			</section>
-			<div class="points">
-				<ul class="nav-scroll">
-					<li class="nav-scroll__item nav-scroll__item_active"></li>
-					<li class="nav-scroll__item"></li>
-					<li class="nav-scroll__item"></li>
-					<li class="nav-scroll__item"></li>
-					<li class="nav-scroll__item"></li>
-					<li class="nav-scroll__item"></li>
-					<li class="nav-scroll__item"></li>
-					<li class="nav-scroll__item"></li>
-				</ul>
-			</div>
-
-			<div id="hidden-content" class="testimonials-modal">
-				<div class="testimonials-modal__content">
-					<div class="testimonials-modal__header">Константин Спилберг</div>
-					<div class="testimonials-modal__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими
-						мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-				</div>
-			</div>
-			
 		</div>
 	</div>
+
+	<div id="hidden-content" class="testimonials-modal">
+		<div class="testimonials-modal__content">
+			<div class="testimonials-modal__header">Константин Спилберг</div>
+			<div class="testimonials-modal__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими
+				мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+		</div>
+	</div>
+
+	<div id="form-modal" class="modal-form">
+		<div class="modal-form__content">
+			<div class="modal-form__text">Cпасибо за заявку! В ближайшее время с Вами свяжуться наши специалисты.</div>
+		</div>
+	</div>
+
+	<div class="points">
+		<ul class="nav-scroll">
+			<li class="nav-scroll__item nav-scroll__item_active">
+				<a href="" class="nav-scroll__link" data-scroll-to="0"></a>
+			</li>
+			<li class="nav-scroll__item">
+				<a href="" class="nav-scroll__link" data-scroll-to="1"></a>
+			</li>
+			<li class="nav-scroll__item">
+				<a href="" class="nav-scroll__link" data-scroll-to="2"></a>
+			</li>
+			<li class="nav-scroll__item">
+				<a href="" class="nav-scroll__link" data-scroll-to="3"></a>
+			</li>
+			<li class="nav-scroll__item">
+				<a href="" class="nav-scroll__link" data-scroll-to="4"></a>
+			</li>
+			<li class="nav-scroll__item">
+				<a href="" class="nav-scroll__link" data-scroll-to="5"></a>
+			</li>
+			<li class="nav-scroll__item">
+				<a href="" class="nav-scroll__link" data-scroll-to="6"></a>
+			</li>
+			<li class="nav-scroll__item">
+				<a href="" class="nav-scroll__link" data-scroll-to="7"></a>
+			</li>
+		</ul>
+	</div>
+
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/slick.min.js"></script>
-	<script src="js/jquery.onepage-scroll.min.js"></script>
+	<script src="js/jquery.touchSwipe.min.js"></script>
+	<script src="js/mobile-detect.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/custom.js"></script>
 
 </body>
